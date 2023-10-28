@@ -3,6 +3,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
+import FooterMenu from "./components/FooterMenu";
 import Footer from "./components/Footer";
 
 import { usePathname } from "next/navigation";
@@ -19,13 +20,14 @@ export default function RootLayout({
 }) {
   const currentPath = usePathname();
   return (
-    <html lang="ja">
+    <html lang="ja" className="dark">
       <body className="bg-gray-100 dark:bg-gray-900 text-neutral-800 dark:text-slate-100">
         <Navbar path={currentPath} />
         <div className="text-center text-slate-500 mt-2 mb-2">
           しがない美少女ゲーマーの備忘録
         </div>
         <div className="mx-auto sm:max-w-2xl px-6">{children}</div>
+        <FooterMenu />
         <Footer />
       </body>
     </html>
