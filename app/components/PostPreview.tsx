@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import PostMetadata from "./PostMetadata";
-import TagSection from "./TagSection";
+import PostMetadata from "@/app/types/PostMetadata";
+import TagSection from "@/app/components/TagSection";
 
 const PostPreview = (props: PostMetadata) => {
   return (
@@ -13,7 +13,8 @@ const PostPreview = (props: PostMetadata) => {
           width="0"
           height="0"
           sizes="100vw"
-          style={{ width: "100%", height: "50%" }}
+          loading="eager"
+          style={{ width: "100%", height: "56%" }}
         />
         <p className="text-xl mb-5 mt-5">{props.title}</p>
         <p className="text-sm text-slate-400 dark:text-slate-200">

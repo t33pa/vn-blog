@@ -1,8 +1,8 @@
-import getPostMetadata from "./components/getPostMetadata";
-import PostPreview from "./components/PostPreview";
-import Pagination from "./components/Pagination";
+import getPostMetadata from "@/app/features/getPostMetadata";
+import PostPreview from "@/app/components/PostPreview";
+import Pagination from "@/app/components/Pagination";
 
-import { DEFAULT_MAX_ARTICLES } from "./components/data/consts";
+import { DEFAULT_MAX_ARTICLES } from "./consts/consts";
 
 const HomePage = () => {
   const postMetadata = getPostMetadata();

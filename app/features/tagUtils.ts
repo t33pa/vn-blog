@@ -1,4 +1,4 @@
-import getPostMetadata from "./getPostMetadata";
+import getPostMetadata from "@/app/features/getPostMetadata";
 
 export const fetchAllTags = () => {
   const postMetadata = getPostMetadata();

@@ -1,8 +1,8 @@
-import getPostMetadata from "@/app/components/getPostMetadata";
+import getPostMetadata from "@/app/features/getPostMetadata";
 import PostPreview from "@/app/components/PostPreview";
 import Pagination from "@/app/components/Pagination";
 
-import { DEFAULT_MAX_ARTICLES } from "@/app/components/data/consts";
+import { DEFAULT_MAX_ARTICLES } from "@/app/consts/consts";
 
 type PagesProps = {
   params: {

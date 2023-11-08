@@ -1,6 +1,6 @@
-import getPostMetadata from "@/app/components/getPostMetadata";
+import getPostMetadata from "@/app/features/getPostMetadata";
 import PostPreview from "@/app/components/PostPreview";
-import { fetchAllTags, countPostsFromTag } from "@/app/components/tagUtils";
+import { fetchAllTags, countPostsFromTag } from "@/app/features/tagUtils";
 
 import Link from "next/link";
 
@@ -11,7 +11,11 @@ type TagPageProps = {
 };
 
 export const generateStaticParams = async () => {
-  return fetchAllTags();
+  let tags = fetchAllTags();
+  tags.push("all");
+  return tags.map((tag) => ({
+    slug: tag,
+  }));
 };
 
 type TagCounter = {
@@ -29,7 +33,10 @@ const TagPage = (props: TagPageProps) => {
     }));
     const sortedTagCountMap = tagCountMap.sort((a, b) => b.count - a.count);
     const tagCountSection = sortedTagCountMap.map((tag: TagCounter) => (
-      <span className="inline-block text-2xl text-slate-400 hover:text-blue-500 mr-2">
+      <span
+        key={tag.name}
+        className="inline-block text-2xl text-slate-400 hover:text-blue-500 mr-2"
+      >
         <Link href={`/tags/${tag.name}`}>{tag.name}: </Link> {tag.count}
         件,
       </span>

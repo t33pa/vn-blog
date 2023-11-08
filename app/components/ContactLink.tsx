@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LinkData } from "./LinkData";
+import { LinkData } from "@/app/types/LinkData";
 
 const ContactLink = (props: LinkData) => {
   return (
@@ -14,6 +14,7 @@ const ContactLink = (props: LinkData) => {
         alt="thumbnail"
         width="46"
         height="46"
+        loading="eager"
       ></Image>
       <h2 className="text-xl font-bold mr-5">{props.title}</h2>
       <p>{props.description}</p>

@@ -1,6 +1,6 @@
-import ContactLink from "../components/ContactLink";
-import { LinkData } from "../components/LinkData";
-import snsLinks from "@/app/components/data/snsLink.json";
+import ContactLink from "@/app/components/ContactLink";
+import { LinkData } from "@/app/types/LinkData";
+import snsLinks from "@/app/data/snsLink.json";
 
 import Link from "next/link";
 
@@ -29,13 +29,19 @@ const About = () => {
           </Link>
           を用いて作成しています。
         </p>
+        <p>
+          他にも語学が趣味で、最近は英語とスペイン語に集中しています。それに関して、あるVNの有志翻訳などにも関わっています。
+        </p>
         <p className="mt-2">
           I'm a Japanese uni student who likes VNs. I'll write my reviews of VNs
           I read and random stuff here! I'm also interested in programming, and
-          I built this blog with Next.js. Though I write my posts in Japanese, I
-          speak English (and I'm learning Spanish too) so feel free contact me
-          in English through my SNS accounts below!
+          I made this blog with Next.js. I'm also interested in learning
+          languages and I'm currently studying English and Spanish, and working
+          on QC of a certain fan translation of a VN. Though I write my posts in
+          Japanese, feel free contact me in English through my SNS accounts
+          below!
         </p>
+        <p className="mt-2"></p>
       </div>
       <div id="contact">
         <h1 className="text-2xl">Contacts</h1>

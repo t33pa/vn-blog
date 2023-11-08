@@ -1,5 +1,5 @@
-import getPostMetadata from "@/app/components/getPostMetadata";
-import { DEFAULT_MAX_ARTICLES } from "./data/consts";
+import getPostMetadata from "@/app/features/getPostMetadata";
+import { DEFAULT_MAX_ARTICLES } from "@/app/consts/consts";
 
 import Link from "next/link";
 
